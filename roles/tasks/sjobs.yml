@@ -1,7 +1,7 @@
-- name : copy xml file
+- name: copy xml file
   ansible.builtin.template:
-    src : sjobs.xml
-    dest : /tmp/test.xml
+    src: sjobs.xml
+    dest: /tmp/test.xml
 
 - name: create jenkins jobs-1
   community.general.jenkins_job:
