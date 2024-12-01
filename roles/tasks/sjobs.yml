@@ -4,8 +4,10 @@
   tasks :
     - name: create jenkins jobs-1
       community.general.jenkins_job:
-        config: "{{ lookup('file', 'test.xml') }}"
-        name: test-create
+        config: "{{ lookup('file', 'sjobs.xml') }}"
+        name: {{ item.job_name }}
         password: admin123
         url: http://172.31.46.25:8080
         user: admin
+
+
