@@ -3,7 +3,7 @@ def call() {
 
         agent {
             node {
-                label 'roboshop-terrafrom'
+                label 'terraform-workstation'
             }
         }
 
