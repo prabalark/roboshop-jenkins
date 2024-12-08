@@ -7,10 +7,6 @@ def call() {
             }
         }
 
-        options {
-            ansiColor('xterm')
-        }
-
         parameters {
             choice(name: 'env', choices: ['dev', 'prod'], description: 'Pick environment')
             choice(name: 'action', choices: ['apply', 'destroy'], description: 'Pick Action')
