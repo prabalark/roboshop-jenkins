@@ -1,3 +1,11 @@
+- name:  check if jenkins job exits or not
+  community.general.jenkins_job_info:
+    name: "{{ item.job_name }}"
+    user: admin
+    password: admin123
+    url: http://172.31.46.25:8080
+  register: jenkins_job_status
+
 - name: copy xml file
   ansible.builtin.template:
     src: sjobs.xml
