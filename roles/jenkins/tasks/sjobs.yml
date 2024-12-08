@@ -5,11 +5,13 @@
     password: admin123
     url: http://172.31.46.25:8080
   register: jenkins_job_status
+  ignore_erros: true
 
 - name: copy xml file
   ansible.builtin.template:
     src: sjobs.xml
     dest: /tmp/test.xml
+  when: jenkins_job_status.failed
 
 - name: create jenkins jobs-1
   community.general.jenkins_job:
@@ -18,5 +20,5 @@
     password: admin123
     url: http://172.31.46.25:8080
     user: admin
-
+  when: jenkins_job_status.failed
 
