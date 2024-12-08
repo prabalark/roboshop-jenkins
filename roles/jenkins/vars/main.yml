@@ -1,3 +1,4 @@
 sjobs :
   - { git_repo_url: https://github.com/prabalark/roboshop-terrafrom.git, job_name: roboshop-terrafrom }
   - { git_repo_url: https://github.com/prabalark/roboshop-ansible-72.git,job_name: roboshop-ansible }
+  - { git_repo_url: https://github.com/prabalark/aws-ssm-parameter.git,job_name: aws-ssm-parameter }
