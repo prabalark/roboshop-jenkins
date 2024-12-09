@@ -1,4 +1,9 @@
-- name: include task list in play
+- name: single job
   ansible.builtin.include_tasks:
      file: sjobs.yml
   loop: "{{sjobs}}"
+
+- name: double job
+  ansible.builtin.include_tasks:
+    file: sjobs.yml
+  loop: "{{mjobs}}"
