@@ -5,5 +5,5 @@
 
 - name: double job
   ansible.builtin.include_tasks:
-    file: sjobs.yml
+    file: mjobs.yml
   loop: "{{mjobs}}"
