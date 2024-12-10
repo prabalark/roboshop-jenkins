@@ -1,19 +1,15 @@
 def call() {
-   pipeline{
+    pipeline {
+
         agent {
             node {
-                label 'workstation'
+                label 'terraform-workstation'
             }
         }
 
         options {
             ansiColor('xterm')
         }
-
-        environment {
-            NEXUS = credentials('NEXUS')
-        }
-
 
         stages {
 
@@ -42,10 +38,16 @@ def call() {
                     sh 'echo Checkmarx SCA Scan'
                 }
             }
-    }
-    }
 
+        }
+
+        post {
+            always {
+                cleanWs()
+            }
+        }
+
+    }
 
 
 }
-
