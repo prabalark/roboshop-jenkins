@@ -33,8 +33,6 @@ def call() {
                 cleanWs()
             }
         }
-
     }
-
 
 }
