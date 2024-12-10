@@ -7,10 +7,6 @@ def call() {
             }
         }
 
-        options {
-            ansiColor('xterm')
-        }
-
         stages {
 
             stage('Code Quality') {
