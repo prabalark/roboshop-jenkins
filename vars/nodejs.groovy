@@ -1,5 +1,5 @@
 def call() {
-    pipeline {
+  pipeline {
 
         agent {
             node {
@@ -44,7 +44,7 @@ def call() {
             }
         }
 
-    }
+  }
 
 
 }
