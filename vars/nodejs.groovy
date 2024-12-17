@@ -36,6 +36,11 @@ def call() {
               }
           }
           stage('Release Application') {
+              when {
+                  experssion {
+                     env.TAG_NAME ==~ ".*"
+                  }
+              }
               steps {
                   sh 'env'
                   sh 'echo Release Application'
