@@ -32,9 +32,9 @@ def call() {
 
           stage('CheckMarx SCA Scan') {
               steps {
-                sh 'echo Checkmarx SCA Scan'
+                  sh 'echo Checkmarx SCA Scan'
               }
-
+          }
           stage('Release Application') {
               steps {
                   sh 'env'
