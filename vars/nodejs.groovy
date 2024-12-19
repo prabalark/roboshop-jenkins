@@ -44,8 +44,8 @@ def call() {
               steps {
                   sh 'npm install'
                   sh 'echo $TAG_NAME >VERSION'
-                  sh 'zip -r $(component)-${TAG_NAME}.zip node_modules server.js VERSION'
-                  sh 'curl -v -u admin:admin123 --upload-file $(component)-${TAG_NAME}.zip http://54.211.245.96:8081/repository/$(component)/$(component)-${TAG_NAME}.zip'
+                  sh 'zip -r ${component}-${TAG_NAME}.zip node_modules server.js VERSION'
+                  sh 'curl -v -u admin:admin123 --upload-file ${component}-${TAG_NAME}.zip http://54.211.245.96:8081/repository/${component}/${component}-${TAG_NAME}.zip'
               }
           }
 
