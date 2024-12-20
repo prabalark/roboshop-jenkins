@@ -7,6 +7,11 @@ def call() {
          }
      }
 
+      environment {
+          NEXUS = credentials('NEXUS')
+
+      }
+
       stages {
 
           stage('Code Quality') {
