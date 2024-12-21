@@ -7,6 +7,10 @@ def call() {
             }
         }
 
+        options {
+            ansicolor{'xterm'}
+        }
+
         environment {
             NEXUS = credentials('NEXUS')
         }
