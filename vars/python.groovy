@@ -8,7 +8,7 @@ def call() {
         }
 
         options {
-            AnsiColor('xterm')
+            ansiColor('xterm')
         }
 
         environment {
