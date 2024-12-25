@@ -52,7 +52,7 @@ def call() {
               steps {
                   sh 'echo $TAG_NAME >VERSION'
                   sh 'zip -r ${component}-${TAG_NAME}.zip *'
-                  sh 'zip -d ${component}-${TAG_NAME}.zip Jenkinsfile'
+                  sh 'zip -d ${component}-${TAG_NAME}.zip Jenkinsfile ${schema_dir}'
                   sh 'curl -f -v -u admin:admin123 --upload-file ${component}-${TAG_NAME}.zip http://52.201.235.47:8081/repository/${component}/${component}-${TAG_NAME}.zip'
               }
           }
