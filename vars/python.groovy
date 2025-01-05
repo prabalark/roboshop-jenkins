@@ -54,7 +54,7 @@ def call() {
                 steps {
                     sh 'echo $TAG_NAME >VERSION'
                     sh 'zip -r ${component}-${TAG_NAME}.zip *.ini *.py *.txt VERSION ${schema_dir}'
-                    sh 'curl -f -v -u ${NEXUS_USR}:${NEXUS_PSW} --upload-file ${component}-${TAG_NAME}.zip http://3.95.194.254:8081/repository/${component}/${component}-${TAG_NAME}.zip'
+                    sh 'curl -f -v -u ${NEXUS_USR}:${NEXUS_PSW} --upload-file ${component}-${TAG_NAME}.zip http://44.201.249.158:8081/repository/${component}/${component}-${TAG_NAME}.zip'
                 }
             }
 
