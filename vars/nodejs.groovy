@@ -54,7 +54,7 @@ def call() {
                   sh 'npm install'
                   sh 'echo $TAG_NAME >VERSION'
                   sh 'zip -r ${component}-${TAG_NAME}.zip node_modules server.js VERSION ${schema_dir}'
-                  sh 'curl -f -v -u ${NEXUS_USR}:${NEXUS_PSW} --upload-file ${component}-${TAG_NAME}.zip http://44.210.123.106:8081/repository/${component}/${component}-${TAG_NAME}.zip'
+                  sh 'curl -f -v -u ${NEXUS_USR}:${NEXUS_PSW} --upload-file ${component}-${TAG_NAME}.zip http://3.86.202.222:8081/repository/${component}/${component}-${TAG_NAME}.zip'
               }
           }
 
